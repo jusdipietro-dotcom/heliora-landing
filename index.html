@@ -1,0 +1,2173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELIORA Energía Solar | Paneles Solares en Zona Sur</title>
+    <meta name="description" content="Venta e instalación de paneles solares en Zona Sur. Reducí hasta un 90% tu factura de luz con energía solar. Presupuesto sin cargo.">
+    <meta name="keywords" content="paneles solares, energía solar, instalación solar, on grid, off grid, zona sur, hudson, buenos aires, heliora">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="HELIORA Energía Solar | Paneles Solares en Zona Sur">
+    <meta property="og:description" content="Venta e instalación de paneles solares. Reducí hasta un 90% tu factura de luz.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_AR">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* ═══════════════════════════════════════
+           CSS VARIABLES & RESET
+        ═══════════════════════════════════════ */
+        :root {
+            --gold: #E8A020;
+            --gold-light: #F5C563;
+            --gold-glow: #FFD97033;
+            --gold-bg: #FFF8EB;
+            --navy: #0B1A2E;
+            --navy-light: #132742;
+            --navy-mid: #1C3454;
+            --slate: #4A5568;
+            --slate-light: #94A3B8;
+            --warm-white: #FEFCF8;
+            --warm-gray: #F5F1EB;
+            --border: #E8E0D4;
+            --shadow-sm: 0 1px 3px rgba(11,26,46,0.06);
+            --shadow-md: 0 8px 30px rgba(11,26,46,0.08);
+            --shadow-lg: 0 20px 60px rgba(11,26,46,0.12);
+            --shadow-gold: 0 8px 40px rgba(232,160,32,0.25);
+            --radius: 16px;
+            --radius-sm: 10px;
+            --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--navy);
+            background: var(--warm-white);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; }
+        button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ═══════════════════════════════════════
+           GLOBAL COMPONENTS
+        ═══════════════════════════════════════ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 36px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 0.02em;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--navy);
+            box-shadow: var(--shadow-gold);
+        }
+        .btn-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 50px rgba(232,160,32,0.35);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        .btn-secondary:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .btn-dark {
+            background: var(--navy);
+            color: white;
+        }
+        .btn-dark:hover {
+            background: var(--navy-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+        .section-label::before {
+            content: '';
+            width: 24px;
+            height: 2px;
+            background: var(--gold);
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -0.03em;
+        }
+
+        .section-subtitle {
+            font-size: 1.15rem;
+            color: var(--slate);
+            line-height: 1.7;
+            max-width: 580px;
+        }
+
+        /* ═══════════════════════════════════════
+           NAVBAR
+        ═══════════════════════════════════════ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: var(--transition);
+        }
+        .navbar.scrolled {
+            background: rgba(11,26,46,0.95);
+            backdrop-filter: blur(20px);
+            padding: 12px 0;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+        }
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .nav-logo svg {
+            width: 42px;
+            height: 42px;
+        }
+        .nav-logo-text {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: white;
+            letter-spacing: 0.05em;
+        }
+        .nav-logo-text span {
+            display: block;
+            font-size: 0.65rem;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-top: -2px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+            list-style: none;
+        }
+        .nav-links a {
+            color: rgba(255,255,255,0.75);
+            font-weight: 500;
+            font-size: 0.92rem;
+            transition: var(--transition);
+            position: relative;
+        }
+        .nav-links a:hover { color: white; }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: var(--transition);
+        }
+        .nav-links a:hover::after { width: 100%; }
+
+        .nav-cta {
+            padding: 12px 28px;
+            background: var(--gold);
+            color: var(--navy) !important;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .nav-cta:hover {
+            background: var(--gold-light);
+            transform: translateY(-1px);
+        }
+        .nav-cta::after { display: none !important; }
+
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            padding: 8px;
+        }
+        .nav-hamburger span {
+            width: 24px;
+            height: 2px;
+            background: white;
+            transition: var(--transition);
+        }
+
+        /* Mobile Nav */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--navy);
+            z-index: 999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+        }
+        .mobile-nav.active { display: flex; }
+        .mobile-nav a {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .mobile-nav-close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            color: white;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* ═══════════════════════════════════════
+           HERO
+        ═══════════════════════════════════════ */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: var(--navy);
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 70% 40%, rgba(232,160,32,0.12) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 80% at 20% 80%, rgba(19,39,66,0.8) 0%, transparent 60%);
+            z-index: 1;
+        }
+
+        /* Animated sun rays */
+        .hero-sun {
+            position: absolute;
+            top: -10%;
+            right: -5%;
+            width: 700px;
+            height: 700px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(232,160,32,0.15) 0%, rgba(232,160,32,0.05) 40%, transparent 70%);
+            animation: sunPulse 8s ease-in-out infinite;
+        }
+        @keyframes sunPulse {
+            0%, 100% { transform: scale(1); opacity: 0.7; }
+            50% { transform: scale(1.1); opacity: 1; }
+        }
+
+        .hero-rays {
+            position: absolute;
+            top: 5%;
+            right: 10%;
+            width: 400px;
+            height: 400px;
+            animation: raysRotate 60s linear infinite;
+        }
+        @keyframes raysRotate { to { transform: rotate(360deg); } }
+
+        .hero-ray {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(232,160,32,0.2), transparent);
+            transform-origin: 0 0;
+        }
+
+        /* Grid pattern */
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse 70% 60% at 60% 50%, black, transparent);
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            padding-top: 120px;
+            padding-bottom: 80px;
+        }
+
+        .hero-content {
+            max-width: 580px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            background: rgba(232,160,32,0.1);
+            border: 1px solid rgba(232,160,32,0.25);
+            border-radius: 60px;
+            color: var(--gold);
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            margin-bottom: 28px;
+            animation: fadeInUp 0.8s ease both;
+        }
+        .hero-badge-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--gold);
+            animation: dotPulse 2s ease-in-out infinite;
+        }
+        @keyframes dotPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 6vw, 4.2rem);
+            font-weight: 900;
+            color: white;
+            line-height: 1.05;
+            letter-spacing: -0.04em;
+            margin-bottom: 24px;
+            animation: fadeInUp 0.8s ease 0.1s both;
+        }
+        .hero h1 em {
+            font-style: normal;
+            color: var(--gold);
+            font-weight: 800;
+        }
+
+        .hero-desc {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.65);
+            line-height: 1.7;
+            margin-bottom: 40px;
+            max-width: 460px;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.3s both;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 56px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+        .hero-stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            letter-spacing: -0.03em;
+        }
+        .hero-stat-number span { color: var(--gold); }
+        .hero-stat-label {
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.45);
+            margin-top: 4px;
+            font-weight: 500;
+        }
+
+        /* Hero Image Card */
+        .hero-visual {
+            position: relative;
+            animation: fadeInRight 1s ease 0.3s both;
+        }
+        .hero-image-card {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+        }
+        .hero-image-card img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+        }
+        .hero-image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 24px;
+            background: linear-gradient(transparent, rgba(11,26,46,0.9));
+        }
+        .hero-image-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: rgba(232,160,32,0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 60px;
+            color: var(--gold);
+            font-size: 0.82rem;
+            font-weight: 600;
+        }
+
+        /* Floating elements */
+        .hero-float {
+            position: absolute;
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            animation: float 6s ease-in-out infinite;
+        }
+        .hero-float-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: rgba(232,160,32,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        .hero-float-text {
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.6);
+            font-weight: 500;
+        }
+        .hero-float-value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: white;
+        }
+        .hero-float-1 {
+            top: 20%;
+            right: -20px;
+            animation-delay: 0s;
+        }
+        .hero-float-2 {
+            bottom: 15%;
+            left: -30px;
+            animation-delay: 2s;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(40px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* ═══════════════════════════════════════
+           TRUSTED BY / MARQUEE
+        ═══════════════════════════════════════ */
+        .trust-bar {
+            background: var(--warm-gray);
+            padding: 28px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .trust-bar .container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        .trust-bar-label {
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--slate-light);
+            white-space: nowrap;
+        }
+        .trust-logos {
+            display: flex;
+            align-items: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+        .trust-logo {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--slate-light);
+            opacity: 0.5;
+            transition: var(--transition);
+        }
+        .trust-logo:hover { opacity: 1; }
+
+        /* ═══════════════════════════════════════
+           BENEFITS
+        ═══════════════════════════════════════ */
+        .benefits {
+            padding: 120px 0;
+            position: relative;
+        }
+        .benefits-header {
+            text-align: center;
+            margin-bottom: 72px;
+        }
+        .benefits-header .section-subtitle {
+            margin: 0 auto;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .benefit-card {
+            padding: 44px 36px;
+            border-radius: var(--radius);
+            background: white;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+        .benefit-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+        .benefit-card:hover::before { transform: scaleX(1); }
+
+        .benefit-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            background: var(--gold-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            font-size: 1.8rem;
+            transition: var(--transition);
+        }
+        .benefit-card:hover .benefit-icon {
+            background: var(--gold);
+            transform: scale(1.05);
+        }
+
+        .benefit-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+        .benefit-card p {
+            color: var(--slate);
+            line-height: 1.65;
+            font-size: 0.95rem;
+        }
+
+        .benefit-metric {
+            display: inline-flex;
+            align-items: baseline;
+            gap: 4px;
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+        }
+        .benefit-metric strong {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--gold);
+        }
+        .benefit-metric span {
+            font-size: 0.85rem;
+            color: var(--slate-light);
+            font-weight: 500;
+        }
+
+        /* ═══════════════════════════════════════
+           SERVICES
+        ═══════════════════════════════════════ */
+        .services {
+            padding: 120px 0;
+            background: var(--navy);
+            position: relative;
+            overflow: hidden;
+        }
+        .services::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            right: -200px;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(232,160,32,0.08) 0%, transparent 70%);
+        }
+
+        .services-header {
+            margin-bottom: 72px;
+        }
+        .services-header .section-title { color: white; }
+        .services-header .section-subtitle { color: rgba(255,255,255,0.55); }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-card {
+            padding: 44px 36px;
+            border-radius: var(--radius);
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: var(--transition);
+            position: relative;
+        }
+        .service-card:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(232,160,32,0.3);
+            transform: translateY(-4px);
+        }
+
+        .service-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 60px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+        .service-badge.popular {
+            background: rgba(232,160,32,0.15);
+            color: var(--gold);
+        }
+        .service-badge.eco {
+            background: rgba(52,211,153,0.1);
+            color: #34D399;
+        }
+
+        .service-icon-lg {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+        .service-card p {
+            color: rgba(255,255,255,0.5);
+            line-height: 1.65;
+            font-size: 0.95rem;
+            margin-bottom: 28px;
+        }
+
+        .service-features {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .service-features li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255,255,255,0.65);
+            font-size: 0.88rem;
+        }
+        .service-features li::before {
+            content: '✓';
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        /* ═══════════════════════════════════════
+           PROCESS
+        ═══════════════════════════════════════ */
+        .process {
+            padding: 120px 0;
+            position: relative;
+        }
+
+        .process-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        .process-header .section-subtitle {
+            margin: 0 auto;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            position: relative;
+        }
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 52px;
+            left: 12%;
+            right: 12%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--border), var(--gold), var(--border));
+            z-index: 0;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .process-step-number {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: white;
+            border: 3px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--gold);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+        .process-step:hover .process-step-number {
+            background: var(--gold);
+            color: white;
+            transform: scale(1.1);
+        }
+        .process-step h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.01em;
+        }
+        .process-step p {
+            color: var(--slate);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* ═══════════════════════════════════════
+           PORTFOLIO / TRABAJOS
+        ═══════════════════════════════════════ */
+        .portfolio {
+            padding: 120px 0;
+            background: var(--warm-gray);
+        }
+
+        .portfolio-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 56px;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 24px;
+        }
+        .portfolio-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 24px;
+        }
+
+        .portfolio-card {
+            border-radius: var(--radius);
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .portfolio-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        .portfolio-card.featured {
+            grid-row: 1 / 3;
+        }
+        .portfolio-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        .portfolio-card:hover img {
+            transform: scale(1.03);
+        }
+
+        .portfolio-card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 32px;
+            background: linear-gradient(transparent, rgba(11,26,46,0.85));
+            transform: translateY(20px);
+            opacity: 0;
+            transition: var(--transition);
+        }
+        .portfolio-card:hover .portfolio-card-overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .portfolio-card-overlay h4 {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+        .portfolio-card-overlay p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.85rem;
+            margin-top: 4px;
+        }
+
+        /* ═══════════════════════════════════════
+           CALCULATOR CTA
+        ═══════════════════════════════════════ */
+        .calculator {
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .calculator-card {
+            background: var(--navy);
+            border-radius: 28px;
+            padding: 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .calculator-card::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(232,160,32,0.1), transparent 70%);
+        }
+
+        .calculator-content {
+            position: relative;
+            z-index: 1;
+        }
+        .calculator-content .section-title { color: white; }
+        .calculator-content .section-subtitle { color: rgba(255,255,255,0.55); }
+
+        .calculator-form {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .form-group label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.65);
+        }
+        .form-group input,
+        .form-group select {
+            padding: 16px 20px;
+            border-radius: var(--radius-sm);
+            border: 1px solid rgba(255,255,255,0.12);
+            background: rgba(255,255,255,0.06);
+            color: white;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: var(--transition);
+            outline: none;
+        }
+        .form-group input::placeholder { color: rgba(255,255,255,0.3); }
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: var(--gold);
+            background: rgba(232,160,32,0.06);
+        }
+        .form-group select option {
+            background: var(--navy);
+            color: white;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        /* ═══════════════════════════════════════
+           TESTIMONIALS
+        ═══════════════════════════════════════ */
+        .testimonials {
+            padding: 120px 0;
+            background: var(--warm-gray);
+        }
+
+        .testimonials-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+        .testimonials-header .section-subtitle { margin: 0 auto; }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .testimonial-card {
+            padding: 36px;
+            border-radius: var(--radius);
+            background: white;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+        .testimonial-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-3px);
+        }
+
+        .testimonial-stars {
+            display: flex;
+            gap: 3px;
+            margin-bottom: 16px;
+            color: var(--gold);
+            font-size: 1rem;
+        }
+
+        .testimonial-card blockquote {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--slate);
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .testimonial-avatar {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: var(--gold-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--gold);
+            font-size: 1rem;
+        }
+        .testimonial-name {
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+        .testimonial-location {
+            font-size: 0.8rem;
+            color: var(--slate-light);
+        }
+
+        /* ═══════════════════════════════════════
+           FAQ
+        ═══════════════════════════════════════ */
+        .faq {
+            padding: 120px 0;
+        }
+
+        .faq-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .faq-item.active {
+            border-color: var(--gold);
+            box-shadow: 0 4px 20px rgba(232,160,32,0.1);
+        }
+
+        .faq-question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 20px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--navy);
+            text-align: left;
+            transition: var(--transition);
+            background: white;
+        }
+        .faq-question:hover { background: var(--gold-bg); }
+
+        .faq-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--warm-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+        .faq-item.active .faq-icon {
+            background: var(--gold);
+            color: white;
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+        .faq-answer-inner {
+            padding: 0 24px 20px;
+            color: var(--slate);
+            font-size: 0.92rem;
+            line-height: 1.7;
+        }
+
+        /* ═══════════════════════════════════════
+           CTA FINAL
+        ═══════════════════════════════════════ */
+        .cta-final {
+            padding: 120px 0;
+            background: var(--navy);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        .cta-final::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(232,160,32,0.1) 0%, transparent 60%);
+        }
+
+        .cta-final .container { position: relative; z-index: 1; }
+
+        .cta-final .section-title {
+            color: white;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            max-width: 700px;
+            margin: 0 auto 20px;
+        }
+        .cta-final .section-subtitle {
+            color: rgba(255,255,255,0.55);
+            margin: 0 auto 44px;
+            text-align: center;
+        }
+        .cta-final-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-final-trust {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            margin-top: 48px;
+            flex-wrap: wrap;
+        }
+        .cta-final-trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.85rem;
+        }
+
+        /* ═══════════════════════════════════════
+           FOOTER
+        ═══════════════════════════════════════ */
+        .footer {
+            background: #060E1A;
+            padding: 64px 0 32px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.4);
+            font-size: 0.88rem;
+            line-height: 1.6;
+            margin-top: 16px;
+            max-width: 280px;
+        }
+
+        .footer h4 {
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .footer-links a {
+            color: rgba(255,255,255,0.4);
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        .footer-links a:hover { color: var(--gold); }
+
+        .footer-bottom {
+            padding-top: 32px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .footer-bottom p {
+            color: rgba(255,255,255,0.3);
+            font-size: 0.82rem;
+        }
+        .footer-social {
+            display: flex;
+            gap: 16px;
+        }
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.4);
+            transition: var(--transition);
+        }
+        .footer-social a:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        /* WhatsApp floating button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 900;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: #25D366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 30px rgba(37,211,102,0.4);
+            transition: var(--transition);
+            animation: waPulse 3s ease-in-out infinite;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 40px rgba(37,211,102,0.5);
+        }
+        .whatsapp-float svg {
+            width: 32px;
+            height: 32px;
+            fill: white;
+        }
+        @keyframes waPulse {
+            0%, 100% { box-shadow: 0 6px 30px rgba(37,211,102,0.4); }
+            50% { box-shadow: 0 6px 30px rgba(37,211,102,0.6), 0 0 0 12px rgba(37,211,102,0.1); }
+        }
+
+        /* ═══════════════════════════════════════
+           SCROLL ANIMATIONS
+        ═══════════════════════════════════════ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ═══════════════════════════════════════
+           RESPONSIVE
+        ═══════════════════════════════════════ */
+        @media (max-width: 1024px) {
+            .hero .container { grid-template-columns: 1fr; gap: 40px; }
+            .hero-visual { max-width: 500px; }
+            .hero-float { display: none; }
+            .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .process-steps { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+            .process-steps::before { display: none; }
+            .portfolio-grid { grid-template-columns: 1fr 1fr; }
+            .portfolio-grid-3 { grid-template-columns: 1fr 1fr; }
+            .portfolio-card.featured { grid-row: auto; }
+            .calculator-card { grid-template-columns: 1fr; padding: 48px; }
+            .testimonials-grid { grid-template-columns: 1fr 1fr; }
+            .faq-layout { grid-template-columns: 1fr; gap: 40px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-hamburger { display: flex; }
+            .hero { min-height: auto; padding: 100px 0 60px; }
+            .hero h1 { font-size: 2.4rem; }
+            .hero-stats { gap: 24px; }
+            .hero-stat-number { font-size: 1.5rem; }
+            .benefits-grid,
+            .services-grid,
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .process-steps { grid-template-columns: 1fr 1fr; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+            .portfolio-grid-3 { grid-template-columns: 1fr; }
+            .calculator-card { padding: 36px 24px; }
+            .form-row { grid-template-columns: 1fr; }
+            .cta-final { padding: 80px 0; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .trust-bar .container { flex-direction: column; gap: 16px; }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 2rem; }
+            .hero-buttons { flex-direction: column; }
+            .hero-buttons .btn { width: 100%; justify-content: center; }
+            .hero-stats { flex-direction: column; gap: 16px; }
+            .section-title { font-size: 1.8rem; }
+            .benefit-card, .service-card, .testimonial-card { padding: 28px 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══ NAVBAR ═══ -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="nav-logo">
+                <svg viewBox="0 0 48 48" fill="none">
+                    <circle cx="24" cy="16" r="12" fill="#E8A020" opacity="0.3"/>
+                    <circle cx="24" cy="16" r="8" fill="#E8A020"/>
+                    <path d="M8 28 L14 22 L18 26 L22 20 L26 24 L30 18 L34 24 L38 22 L40 28 Z" fill="#0B1A2E" stroke="#E8A020" stroke-width="0.5"/>
+                    <path d="M8 28 L40 28 L40 34 C40 36 38 38 36 38 L12 38 C10 38 8 36 8 34 Z" fill="#0B1A2E"/>
+                    <line x1="11" y1="31" x2="37" y2="31" stroke="#E8A020" stroke-width="0.3" opacity="0.5"/>
+                    <line x1="11" y1="34" x2="37" y2="34" stroke="#E8A020" stroke-width="0.3" opacity="0.5"/>
+                </svg>
+                <div class="nav-logo-text">
+                    HELIORA
+                    <span>Energía Solar</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#proceso">Proceso</a></li>
+                <li><a href="#trabajos">Trabajos</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contacto" class="nav-cta">Presupuesto Gratis</a></li>
+            </ul>
+            <button class="nav-hamburger" onclick="toggleMobileNav()" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobileNav">
+        <button class="mobile-nav-close" onclick="toggleMobileNav()" aria-label="Cerrar menú">&times;</button>
+        <a href="#beneficios" onclick="toggleMobileNav()">Beneficios</a>
+        <a href="#servicios" onclick="toggleMobileNav()">Servicios</a>
+        <a href="#proceso" onclick="toggleMobileNav()">Proceso</a>
+        <a href="#trabajos" onclick="toggleMobileNav()">Trabajos</a>
+        <a href="#faq" onclick="toggleMobileNav()">FAQ</a>
+        <a href="#contacto" class="btn btn-primary" onclick="toggleMobileNav()">Presupuesto Gratis</a>
+    </div>
+
+    <!-- ═══ HERO ═══ -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-sun"></div>
+            <div class="hero-rays" id="heroRays"></div>
+            <div class="hero-grid"></div>
+        </div>
+
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <div class="hero-badge-dot"></div>
+                    Zona Sur, Buenos Aires
+                </div>
+
+                <h1>
+                    Generá tu propia<br>
+                    <em>energía solar</em>
+                </h1>
+
+                <p class="hero-desc">
+                    Instalamos paneles solares para hogares y empresas. Reducí hasta un 90% tu factura de luz con un sistema diseñado a medida.
+                </p>
+
+                <div class="hero-buttons">
+                    <!-- TODO: Reemplazar XXXXXXXXXX con el número real de WhatsApp -->
+                    <a href="https://wa.me/54XXXXXXXXXX?text=Hola%20HELIORA!%20Quiero%20un%20presupuesto%20de%20paneles%20solares" class="btn btn-primary" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.121 1.52 5.854L0 24l6.335-1.652A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-1.98 0-3.83-.534-5.42-1.467l-.389-.231-3.758.98.998-3.648-.253-.403A9.786 9.786 0 012.18 12C2.18 6.58 6.58 2.18 12 2.18S21.82 6.58 21.82 12 17.42 21.82 12 21.82z"/></svg>
+                        Pedir Presupuesto
+                    </a>
+                    <a href="#servicios" class="btn btn-secondary">
+                        Ver Servicios
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div>
+                        <div class="hero-stat-number">+50<span>kW</span></div>
+                        <div class="hero-stat-label">Instalados</div>
+                    </div>
+                    <div>
+                        <div class="hero-stat-number">100<span>%</span></div>
+                        <div class="hero-stat-label">Garantizado</div>
+                    </div>
+                    <div>
+                        <div class="hero-stat-number">25<span> años</span></div>
+                        <div class="hero-stat-label">Vida útil</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-image-card">
+                    <!-- Referencia a imagen real de instalación -->
+                    <img src="img/paneles-vista-aerea.jpeg" alt="Instalación de 24 paneles solares On Grid en Hudson por HELIORA">
+                    <div class="hero-image-overlay">
+                        <div class="hero-image-tag">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                            Guillermo E. Hudson — 24 paneles On Grid
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-float hero-float-1">
+                    <div class="hero-float-icon">⚡</div>
+                    <div>
+                        <div class="hero-float-text">Ahorro mensual</div>
+                        <div class="hero-float-value">Hasta 90%</div>
+                    </div>
+                </div>
+                <div class="hero-float hero-float-2">
+                    <div class="hero-float-icon">☀️</div>
+                    <div>
+                        <div class="hero-float-text">Retorno inversión</div>
+                        <div class="hero-float-value">3-5 años</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ TRUST BAR ═══ -->
+    <div class="trust-bar">
+        <div class="container">
+            <div class="trust-bar-label">Marcas que instalamos</div>
+            <div class="trust-logos">
+                <div class="trust-logo">Jinko Solar</div>
+                <div class="trust-logo">LONGi</div>
+                <div class="trust-logo">Growatt</div>
+                <div class="trust-logo">GoodWe</div>
+                <div class="trust-logo">Sungrow</div>
+                <div class="trust-logo">Victron</div>
+                <div class="trust-logo">Pylontech</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ BENEFITS ═══ -->
+    <section class="benefits" id="beneficios">
+        <div class="container">
+            <div class="benefits-header reveal">
+                <div class="section-label">Por qué elegir solar</div>
+                <h2 class="section-title">Tu techo puede generar<br>la energía que consumís</h2>
+                <p class="section-subtitle">Argentina tiene más de 300 días de sol al año. Aprovechá cada rayo con un sistema diseñado para tu consumo.</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card reveal">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Reducí tu factura</h3>
+                    <p>Dejá de pagar tarifas que aumentan cada mes. Un sistema solar reduce tu factura de luz hasta un 90% desde el primer día.</p>
+                    <div class="benefit-metric">
+                        <strong>90%</strong>
+                        <span>menos en tu factura</span>
+                    </div>
+                </div>
+
+                <div class="benefit-card reveal">
+                    <div class="benefit-icon">🏠</div>
+                    <h3>Valorizá tu propiedad</h3>
+                    <p>Las propiedades con paneles solares aumentan su valor de mercado. Una mejora real que se paga sola.</p>
+                    <div class="benefit-metric">
+                        <strong>+15%</strong>
+                        <span>valor de la propiedad</span>
+                    </div>
+                </div>
+
+                <div class="benefit-card reveal">
+                    <div class="benefit-icon">🌱</div>
+                    <h3>Energía sustentable</h3>
+                    <p>Cada panel instalado reduce tu huella de carbono. Generá energía limpia y contribuí a un futuro más verde.</p>
+                    <div class="benefit-metric">
+                        <strong>1.5 ton</strong>
+                        <span>menos CO₂ por año/kW</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ SERVICES ═══ -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="services-header reveal">
+                <div class="section-label">Nuestros servicios</div>
+                <h2 class="section-title">Soluciones para cada necesidad</h2>
+                <p class="section-subtitle">Desde hogares hasta empresas, diseñamos el sistema ideal para tu consumo y tu presupuesto.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-badge popular">Más elegido</div>
+                    <div class="service-icon-lg">⚡</div>
+                    <h3>Sistema On Grid</h3>
+                    <p>Conectado a la red eléctrica. Generás tu energía y el excedente lo inyectás a la red, reduciendo tu factura al mínimo.</p>
+                    <ul class="service-features">
+                        <li>Inversión más accesible</li>
+                        <li>Inyección a red (Ley 27.424)</li>
+                        <li>Sin baterías necesarias</li>
+                        <li>ROI en 3-5 años</li>
+                        <li>Ideal para hogares y comercios</li>
+                    </ul>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-badge eco">Autonomía total</div>
+                    <div class="service-icon-lg">🔋</div>
+                    <h3>Sistema Off Grid</h3>
+                    <p>100% independiente de la red. Ideal para zonas rurales o donde no llega el tendido eléctrico.</p>
+                    <ul class="service-features">
+                        <li>Independencia energética total</li>
+                        <li>Baterías de litio incluidas</li>
+                        <li>Funciona sin conexión a red</li>
+                        <li>Ideal para campo y zonas aisladas</li>
+                        <li>Backup ante cortes de luz</li>
+                    </ul>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-badge popular">Lo mejor de ambos</div>
+                    <div class="service-icon-lg">🔧</div>
+                    <h3>Sistema Híbrido</h3>
+                    <p>Lo mejor de ambos mundos: conectado a la red con respaldo de baterías para no quedarte nunca sin energía.</p>
+                    <ul class="service-features">
+                        <li>Red + baterías de respaldo</li>
+                        <li>Máxima eficiencia</li>
+                        <li>Protección ante cortes</li>
+                        <li>Escalable a futuro</li>
+                        <li>Ideal para empresas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ PROCESS ═══ -->
+    <section class="process" id="proceso">
+        <div class="container">
+            <div class="process-header reveal">
+                <div class="section-label">Cómo trabajamos</div>
+                <h2 class="section-title">De tu techo al sol en 4 pasos</h2>
+                <p class="section-subtitle">Un proceso simple, transparente y sin sorpresas. Nos encargamos de todo.</p>
+            </div>
+
+            <div class="process-steps">
+                <div class="process-step reveal">
+                    <div class="process-step-number">1</div>
+                    <h3>Consulta gratuita</h3>
+                    <p>Analizamos tu consumo, tu techo y tu ubicación para diseñar la mejor solución.</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-step-number">2</div>
+                    <h3>Diseño a medida</h3>
+                    <p>Calculamos la cantidad exacta de paneles, potencia del inversor y proyección de ahorro.</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-step-number">3</div>
+                    <h3>Instalación profesional</h3>
+                    <p>Equipo técnico certificado instala tu sistema en 1 a 3 días según la complejidad.</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-step-number">4</div>
+                    <h3>Monitoreo y garantía</h3>
+                    <p>Tu sistema queda monitoreado 24/7 con garantía de rendimiento de 25 años.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ PORTFOLIO ═══ -->
+    <section class="portfolio" id="trabajos">
+        <div class="container">
+            <div class="portfolio-header reveal">
+                <div>
+                    <div class="section-label">Trabajos realizados</div>
+                    <h2 class="section-title">Instalaciones reales</h2>
+                </div>
+                <a href="#contacto" class="btn btn-dark">Ver más trabajos</a>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-card featured reveal">
+                    <img src="img/hudson-instalacion.jpeg" alt="Instalación de paneles solares en Guillermo E. Hudson" style="min-height: 100%;">
+                    <div class="portfolio-card-overlay">
+                        <h4>Residencia en Hudson</h4>
+                        <p>24 paneles — Sistema On Grid — Guillermo E. Hudson</p>
+                    </div>
+                </div>
+                <div class="portfolio-card reveal">
+                    <img src="img/paneles-vista-aerea.jpeg" alt="Vista aérea instalación solar HELIORA" style="min-height: 240px;">
+                    <div class="portfolio-card-overlay">
+                        <h4>Vista aérea</h4>
+                        <p>Sistema completo de 24 paneles en techo</p>
+                    </div>
+                </div>
+                <div class="portfolio-card reveal">
+                    <img src="img/inversor.jpeg" alt="Inversor GoodWe instalado con protecciones" style="min-height: 240px;">
+                    <div class="portfolio-card-overlay">
+                        <h4>Inversor y protecciones</h4>
+                        <p>Inversor On Grid con tablero de protecciones DC/AC</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segunda fila de portfolio -->
+            <div class="portfolio-grid-3">
+                <div class="portfolio-card reveal">
+                    <img src="img/inversor-detalle.jpeg" alt="Detalle de inversor y cableado" style="min-height: 280px;">
+                    <div class="portfolio-card-overlay">
+                        <h4>Detalle de inversor</h4>
+                        <p>Cableado profesional y protecciones certificadas</p>
+                    </div>
+                </div>
+                <div class="portfolio-card reveal">
+                    <img src="img/paneles-montaje.jpeg" alt="Detalle de paneles solares instalados" style="min-height: 280px;">
+                    <div class="portfolio-card-overlay">
+                        <h4>Montaje en techo</h4>
+                        <p>Estructura de aluminio y paneles instalados</p>
+                    </div>
+                </div>
+                <div class="portfolio-card reveal">
+                    <img src="img/medidor.jpeg" alt="Medidor bidireccional para inyeccion a red" style="min-height: 280px;">
+                    <div class="portfolio-card-overlay">
+                        <h4>Medidor bidireccional</h4>
+                        <p>Conexión a red para inyección de excedente</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ CALCULATOR CTA ═══ -->
+    <section class="calculator" id="contacto">
+        <div class="container">
+            <div class="calculator-card reveal">
+                <div class="calculator-content">
+                    <div class="section-label">Presupuesto sin cargo</div>
+                    <h2 class="section-title">Pedí tu presupuesto personalizado</h2>
+                    <p class="section-subtitle">Completá el formulario y en menos de 24hs te contactamos con una propuesta a medida para tu hogar o empresa.</p>
+
+                    <div style="margin-top: 36px; display: flex; flex-direction: column; gap: 16px;">
+                        <div style="display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.55); font-size: 0.9rem;">
+                            <span style="color: var(--gold);">✓</span> Sin compromiso
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.55); font-size: 0.9rem;">
+                            <span style="color: var(--gold);">✓</span> Respuesta en menos de 24hs
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.55); font-size: 0.9rem;">
+                            <span style="color: var(--gold);">✓</span> Financiación disponible
+                        </div>
+                    </div>
+                </div>
+
+                <form class="calculator-form" id="contactForm" onsubmit="handleFormSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" placeholder="11 XXXX-XXXX" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="tu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tipo">Tipo de propiedad</label>
+                        <select id="tipo" required>
+                            <option value="" disabled selected>Seleccioná una opción</option>
+                            <option value="casa">Casa / Vivienda</option>
+                            <option value="departamento">Departamento</option>
+                            <option value="comercio">Comercio / Oficina</option>
+                            <option value="industria">Industria / Galpón</option>
+                            <option value="campo">Campo / Zona rural</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="factura">Monto aprox. de tu factura de luz ($/mes)</label>
+                        <input type="text" id="factura" placeholder="Ej: 80.000">
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 8px;">
+                        Solicitar Presupuesto Gratis
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ TESTIMONIALS ═══ -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="testimonials-header reveal">
+                <div class="section-label">Testimonios</div>
+                <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+                <p class="section-subtitle">Familias y empresas que ya generan su propia energía con HELIORA.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <blockquote>"Excelente trabajo. Desde que instalaron los paneles mi factura bajó un 85%. Muy profesionales y prolijos."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MG</div>
+                        <div>
+                            <div class="testimonial-name">Martín G.</div>
+                            <div class="testimonial-location">Hudson, Buenos Aires</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <blockquote>"Me asesoraron de principio a fin. El sistema quedó impecable y ya estoy inyectando energía a la red. Súper recomendable."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">LC</div>
+                        <div>
+                            <div class="testimonial-name">Laura C.</div>
+                            <div class="testimonial-location">Florencio Varela</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <blockquote>"Pusimos paneles en el local y el ahorro es enorme. La inversión se paga sola. Muy contentos con HELIORA."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">RP</div>
+                        <div>
+                            <div class="testimonial-name">Roberto P.</div>
+                            <div class="testimonial-location">Berazategui</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ FAQ ═══ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="faq-layout">
+                <div class="reveal">
+                    <div class="section-label">Preguntas frecuentes</div>
+                    <h2 class="section-title">Todo lo que necesitás saber</h2>
+                    <p class="section-subtitle">Si tenés otra consulta, escribinos por WhatsApp y te respondemos al instante.</p>
+                    <!-- TODO: Reemplazar XXXXXXXXXX con el número real de WhatsApp -->
+                    <a href="https://wa.me/54XXXXXXXXXX" class="btn btn-dark" style="margin-top: 32px;" target="_blank" rel="noopener">
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+
+                <div class="faq-list reveal">
+                    <div class="faq-item active">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            ¿Cuánto cuesta instalar paneles solares?
+                            <div class="faq-icon">+</div>
+                        </button>
+                        <div class="faq-answer" style="max-height: 200px;">
+                            <div class="faq-answer-inner">
+                                El costo depende de tu consumo y el tamaño del sistema. Un sistema residencial típico de 3kW (6-8 paneles) tiene un costo aproximado desde USD 3.000. Ofrecemos financiación y el presupuesto es sin cargo.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            ¿Cuánto ahorro en mi factura de luz?
+                            <div class="faq-icon">+</div>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                Dependiendo del tamaño del sistema y tu consumo, podés ahorrar entre un 50% y un 90% en tu factura mensual. Además, con la Ley de Generación Distribuida (27.424), el excedente que inyectás a la red se descuenta de tu factura.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            ¿Cuánto duran los paneles solares?
+                            <div class="faq-icon">+</div>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                Los paneles solares tienen una vida útil de 25 a 30 años con garantía de rendimiento. Después de 25 años, siguen generando al menos un 80% de su capacidad original. Los inversores tienen garantía de 5 a 12 años según el modelo.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            ¿Funcionan los días nublados?
+                            <div class="faq-icon">+</div>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                Sí. Los paneles generan energía con luz solar, no solo con sol directo. En días nublados producen menos (20-40% de su capacidad), pero siguen generando. El sistema se diseña considerando el promedio anual de radiación solar de tu zona.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            ¿Necesito hacer obras en mi techo?
+                            <div class="faq-icon">+</div>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                No. La instalación es no invasiva. Los paneles se montan sobre estructuras de aluminio que se fijan al techo sin perforaciones dañinas. La instalación típica lleva entre 1 y 3 días y no genera obras mayores.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            ¿Puedo vender la energía que me sobra?
+                            <div class="faq-icon">+</div>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                Con un sistema On Grid y la Ley 27.424 de Generación Distribuida, el excedente que generás se inyecta a la red y se descuenta de tu factura como crédito. No es una "venta" directa, pero reduce significativamente lo que pagás.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ CTA FINAL ═══ -->
+    <section class="cta-final">
+        <div class="container">
+            <div class="section-label" style="justify-content: center;">Empezá hoy</div>
+            <h2 class="section-title reveal">Cada día sin paneles<br>es plata que perdés</h2>
+            <p class="section-subtitle reveal">Pedí tu presupuesto gratuito y descubrí cuánto podés ahorrar con energía solar.</p>
+
+            <div class="cta-final-buttons reveal">
+                <!-- TODO: Reemplazar XXXXXXXXXX con el número real de WhatsApp -->
+                <a href="https://wa.me/54XXXXXXXXXX?text=Hola%20HELIORA!%20Quiero%20un%20presupuesto%20de%20paneles%20solares" class="btn btn-primary" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.121 1.52 5.854L0 24l6.335-1.652A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-1.98 0-3.83-.534-5.42-1.467l-.389-.231-3.758.98.998-3.648-.253-.403A9.786 9.786 0 012.18 12C2.18 6.58 6.58 2.18 12 2.18S21.82 6.58 21.82 12 17.42 21.82 12 21.82z"/></svg>
+                    Pedir Presupuesto por WhatsApp
+                </a>
+                <a href="#contacto" class="btn btn-secondary">Completar Formulario</a>
+            </div>
+
+            <div class="cta-final-trust reveal">
+                <div class="cta-final-trust-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="color: var(--gold);"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    Presupuesto sin cargo
+                </div>
+                <div class="cta-final-trust-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="color: var(--gold);"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    Instalación garantizada
+                </div>
+                <div class="cta-final-trust-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="color: var(--gold);"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    Financiación disponible
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">
+                        <svg viewBox="0 0 48 48" fill="none" width="42" height="42">
+                            <circle cx="24" cy="16" r="12" fill="#E8A020" opacity="0.3"/>
+                            <circle cx="24" cy="16" r="8" fill="#E8A020"/>
+                            <path d="M8 28 L14 22 L18 26 L22 20 L26 24 L30 18 L34 24 L38 22 L40 28 Z" fill="#0B1A2E" stroke="#E8A020" stroke-width="0.5"/>
+                            <path d="M8 28 L40 28 L40 34 C40 36 38 38 36 38 L12 38 C10 38 8 36 8 34 Z" fill="#1C3454"/>
+                        </svg>
+                        <div class="nav-logo-text">
+                            HELIORA
+                            <span>Energía Solar</span>
+                        </div>
+                    </a>
+                    <p>Venta e instalación de paneles solares en Zona Sur, Buenos Aires. Tu energía, tu ahorro, tu futuro.</p>
+                </div>
+
+                <div>
+                    <h4>Servicios</h4>
+                    <ul class="footer-links">
+                        <li><a href="#servicios">Sistema On Grid</a></li>
+                        <li><a href="#servicios">Sistema Off Grid</a></li>
+                        <li><a href="#servicios">Sistema Híbrido</a></li>
+                        <li><a href="#contacto">Presupuesto</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="#beneficios">Beneficios</a></li>
+                        <li><a href="#proceso">Cómo trabajamos</a></li>
+                        <li><a href="#trabajos">Trabajos realizados</a></li>
+                        <li><a href="#faq">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Contacto</h4>
+                    <ul class="footer-links">
+                        <!-- TODO: Reemplazar con datos reales -->
+                        <li><a href="https://wa.me/54XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a></li>
+                        <li><a href="https://instagram.com/heliora.energiasolar" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a href="mailto:info@helioraoficial.com">info@helioraoficial.com</a></li>
+                        <li><a href="#">Guillermo E. Hudson, Bs. As.</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 HELIORA Energía Solar. Todos los derechos reservados.</p>
+                <div class="footer-social">
+                    <a href="https://instagram.com/heliora.energiasolar" target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                    <a href="https://wa.me/54XXXXXXXXXX" target="_blank" rel="noopener" aria-label="WhatsApp">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.121 1.52 5.854L0 24l6.335-1.652A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-1.98 0-3.83-.534-5.42-1.467l-.389-.231-3.758.98.998-3.648-.253-.403A9.786 9.786 0 012.18 12C2.18 6.58 6.58 2.18 12 2.18S21.82 6.58 21.82 12 17.42 21.82 12 21.82z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══ WHATSAPP FLOAT ═══ -->
+    <!-- TODO: Reemplazar XXXXXXXXXX con el número real de WhatsApp -->
+    <a href="https://wa.me/54XXXXXXXXXX?text=Hola%20HELIORA!%20Quiero%20consultar%20sobre%20paneles%20solares" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.121 1.52 5.854L0 24l6.335-1.652A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-1.98 0-3.83-.534-5.42-1.467l-.389-.231-3.758.98.998-3.648-.253-.403A9.786 9.786 0 012.18 12C2.18 6.58 6.58 2.18 12 2.18S21.82 6.58 21.82 12 17.42 21.82 12 21.82z"/></svg>
+    </a>
+
+    <!-- ═══ JAVASCRIPT ═══ -->
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 60);
+        });
+
+        // Mobile nav toggle
+        function toggleMobileNav() {
+            document.getElementById('mobileNav').classList.toggle('active');
+        }
+
+        // Sun rays generation
+        const raysContainer = document.getElementById('heroRays');
+        for (let i = 0; i < 12; i++) {
+            const ray = document.createElement('div');
+            ray.className = 'hero-ray';
+            ray.style.transform = `rotate(${i * 30}deg)`;
+            raysContainer.appendChild(ray);
+        }
+
+        // FAQ accordion
+        function toggleFaq(btn) {
+            const item = btn.parentElement;
+            const wasActive = item.classList.contains('active');
+
+            // Close all
+            document.querySelectorAll('.faq-item').forEach(el => {
+                el.classList.remove('active');
+                el.querySelector('.faq-answer').style.maxHeight = '0';
+            });
+
+            // Open clicked (if wasn't active)
+            if (!wasActive) {
+                item.classList.add('active');
+                const answer = item.querySelector('.faq-answer');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+        }
+
+        // ── CONFIG ──
+        // TODO: Pegar aqui la URL de tu Google Apps Script (ver SETUP_GOOGLE_SHEETS.md)
+        const GOOGLE_SCRIPT_URL = 'TU_URL_DE_GOOGLE_APPS_SCRIPT_AQUI';
+        // TODO: Reemplazar con el numero real de WhatsApp (ej: 541123456789)
+        const WHATSAPP_NUMBER = '54XXXXXXXXXX';
+
+        // Form submit handler
+        async function handleFormSubmit(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+
+            const nombre = document.getElementById('nombre').value;
+            const telefono = document.getElementById('telefono').value;
+            const email = document.getElementById('email').value;
+            const tipo = document.getElementById('tipo').value;
+            const factura = document.getElementById('factura').value;
+
+            // Show loading state
+            btn.innerHTML = 'Enviando...';
+            btn.disabled = true;
+            btn.style.opacity = '0.7';
+
+            // 1. Save to Google Sheets
+            try {
+                if (GOOGLE_SCRIPT_URL !== 'TU_URL_DE_GOOGLE_APPS_SCRIPT_AQUI') {
+                    await fetch(GOOGLE_SCRIPT_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ nombre, telefono, email, tipo, factura })
+                    });
+                }
+            } catch (err) {
+                console.warn('Google Sheets error (datos se envian por WhatsApp):', err);
+            }
+
+            // 2. Show success
+            btn.innerHTML = 'Datos guardados &#10003;';
+            btn.style.opacity = '1';
+            btn.style.background = '#34D399';
+
+            // 3. Open WhatsApp after brief delay
+            setTimeout(() => {
+                const msg = encodeURIComponent(
+                    `Hola HELIORA! Quiero un presupuesto de paneles solares.\n\n` +
+                    `Nombre: ${nombre}\n` +
+                    `Tel: ${telefono}\n` +
+                    `Email: ${email}\n` +
+                    `Propiedad: ${tipo}\n` +
+                    `Factura aprox: $${factura}/mes`
+                );
+                window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, '_blank');
+
+                // Reset form and button
+                e.target.reset();
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+                btn.style.background = '';
+                btn.style.opacity = '';
+            }, 1200);
+        }
+
+        // Scroll reveal animation
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
