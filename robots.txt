@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /SETUP_GOOGLE_SHEETS.md
+
+Sitemap: https://helioraoficial.com/sitemap.xml
